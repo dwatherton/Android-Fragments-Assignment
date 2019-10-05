@@ -22,9 +22,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initRecyclerView(){
-        mAdapter = new DeviceListAdapter(this, DataGenerator.getDevicesDataset(25));
+        mAdapter = new DeviceListAdapter(this);
         mRecyclerView = findViewById(R.id.devices_recycler_view);
         mRecyclerView.setAdapter(mAdapter);
+        mAdapter.addAll(DataGenerator.getDevicesDataset(25));
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(layoutManager);

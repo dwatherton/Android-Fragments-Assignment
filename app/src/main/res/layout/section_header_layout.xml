@@ -17,11 +17,4 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
         android:textColor="@color/colorPrimary"
         android:layout_marginRight="@dimen/spacing_medium"/>
-    <TextView
-        android:id="@+id/title_section_num_elems"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="-"
-        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-        android:textColor="@color/grey_60"/>
 </LinearLayout>

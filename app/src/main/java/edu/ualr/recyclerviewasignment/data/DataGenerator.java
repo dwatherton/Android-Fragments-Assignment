@@ -7,6 +7,7 @@ import java.util.Random;
 
 import edu.ualr.recyclerviewasignment.model.Device;
 import edu.ualr.recyclerviewasignment.model.DeviceListItem;
+import edu.ualr.recyclerviewasignment.model.DeviceSection;
 
 /**
  * Created by irconde on 2019-10-04.
@@ -22,6 +23,7 @@ public class DataGenerator {
 
     public static List<DeviceListItem> getDevicesDataset(int datasetSize) {
         Device device;
+        DeviceSection section;
         String id;
         Device.DeviceStatus status;
         Device.DeviceType type;
@@ -36,6 +38,13 @@ public class DataGenerator {
             device.setDeviceType(type);
             items.add(device);
         }
+
+        for (Device.DeviceStatus value : Device.DeviceStatus.values()) {
+            status = value;
+            section = new DeviceSection(status);
+            items.add(section);
+        }
+
         Collections.shuffle(items);
         return items;
     }
