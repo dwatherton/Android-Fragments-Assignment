@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Home devices</string>
+    <string name="device_section_default">section name</string>
+    <string name="device_name_default">device-name</string>
+    <!-- headers for groups in devices section -->
+    <string name="needs_pairing">Needs setup</string>
+    <string name="connected">Connected</string>
+    <string name="paired">Ready</string>
+    <string name="linked">Offline</string>
+    <!-- device status values -->
+    <string name="needs_pairing_status">Needs setup</string>
+    <string name="connected_status">Connected</string>
+    <string name="paired_status">Ready</string>
+    <string name="linked_status">Offline</string>
+    <!-- device type -->
+    <string name="unknown">Unknown</string>
+    <string name="desktop_pc">Desktop</string>
+    <string name="laptop">Laptop</string>
+    <string name="smartphone" translatable="false">Smartphone</string>
+    <string name="tablet" translatable="false">Tablet</string>
+    <string name="tv" translatable="false">Smart TV</string>
+    <string name="gameconsole">Gameconsole</string>
+    <!-- time units -->
+    <string name="month">month</string>
+    <string name="week">week</string>
+    <string name="day">day</string>
+    <string name="hour">hour</string>
+    <string name="minute">minute</string>
+    <!-- Connection status -->
+    <string name="currently_connected">Currently connected</string>
+    <string name="recently">Recently</string>
+    <string name="long_time_ago">A long time ago</string>
+    <string name="never_connected">Never connected</string>
+</resources>

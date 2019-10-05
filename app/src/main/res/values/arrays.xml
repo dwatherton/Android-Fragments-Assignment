@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="device_status">
+        <item>@string/needs_pairing_status</item>
+        <item>@string/connected_status</item>
+        <item>@string/paired_status</item>
+        <item>@string/linked_status</item>
+    </string-array>
+    <integer-array name="device_images">
+        <item>@drawable/ic_unknown_device</item>
+        <item>@drawable/ic_pc</item>
+        <item>@drawable/ic_laptop</item>
+        <item>@drawable/ic_phone_android</item>
+        <item>@drawable/ic_tablet_android</item>
+        <item>@drawable/ic_tv</item>
+        <item>@drawable/ic_gameconsole</item>
+    </integer-array>
+    <!-- For generating elapsed time dummy data-->
+    <string-array name="time_units">
+        <item>@string/month</item>
+        <item>@string/week</item>
+        <item>@string/day</item>
+        <item>@string/hour</item>
+        <item>@string/minute</item>
+    </string-array>
+    <integer-array name="time_max_values">
+        <item>59</item>
+        <item>23</item>
+        <item>30</item>
+        <item>4</item>
+        <item>11</item>
+    </integer-array>
+    <string-array name="device_type_values">
+        <item>@string/unknown</item>
+        <item>@string/desktop_pc</item>
+        <item>@string/laptop</item>
+        <item>@string/smartphone</item>
+        <item>@string/tablet</item>
+        <item>@string/tv</item>
+        <item>@string/gameconsole</item>
+    </string-array>
+</resources>

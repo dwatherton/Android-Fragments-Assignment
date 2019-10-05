@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3e97ca</color>
+    <color name="colorPrimaryDark">#275580</color>
+    <color name="colorAccent">#84ac36</color>
+    <color name="secondaryColor_700">#6f992c</color>
+    <!-- material grayscale -->
+    <color name="grey_5">#f2f2f2</color>
+    <color name="grey_10">#e6e6e6</color>
+    <color name="grey_20">#cccccc</color>
+    <color name="grey_30">#aaaaaa</color>
+    <color name="grey_40">#999999</color>
+    <color name="grey_50">#888888</color>
+    <color name="grey_60">#666666</color>
+    <color name="grey_80">#37474F</color>
+    <color name="grey_90">#263238</color>
+    <!-- device status colors -->
+    <color name="orange">#FFAF5D</color>
+    <color name="green">#A5E068</color>
+    <!-- ripple effect colors -->
+    <color name="rippleStyleWhite">#80ffffff</color>
+    <color name="rippleStyleBlack">#8096989a</color>
+    <color name="rippleStyleGreen">#80355D2D</color>
+</resources>

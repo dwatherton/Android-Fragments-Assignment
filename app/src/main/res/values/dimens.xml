@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Define standard dimensions -->
+    <dimen name="margin_tiny">4dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_lmedium">20dp</dimen>
+    <dimen name="margin_llmedium">24dp</dimen>
+    <dimen name="margin_slarge">32dp</dimen>
+    <dimen name="margin_mlarge">36dp</dimen>
+    <dimen name="margin_huge">64dp</dimen>
+    <!-- Base spacing -->
+    <dimen name="spacing_small">3dp</dimen>
+    <dimen name="spacing_medium">5dp</dimen>
+    <dimen name="spacing_middle">10dp</dimen>
+    <dimen name="spacing_large">15dp</dimen>
+    <dimen name="spacing_smlarge">18dp</dimen>
+    <dimen name="spacing_xlarge">35dp</dimen>
+    <dimen name="spacing_xxlarge">50dp</dimen>
+    <!-- Drawer width -->
+    <dimen name="drawer_width">250dp</dimen>
+</resources>
