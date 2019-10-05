@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         mAdapter = new DeviceListAdapter(this);
         mRecyclerView = findViewById(R.id.devices_recycler_view);
         mRecyclerView.setAdapter(mAdapter);
-        mAdapter.addAll(DataGenerator.getDevicesDataset(25));
+        mAdapter.addAll(DataGenerator.getDevicesDataset(5));
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(layoutManager);
