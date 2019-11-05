@@ -107,7 +107,7 @@ public class DeviceListAdapter extends RecyclerView.Adapter {
             View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.device_list_item, parent, false);
             vh = new DeviceViewHolder(v);
         } else {
-            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.section_header_layout, parent, false);
+            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.section_header, parent, false);
             vh = new SectionViewHolder(v);
         }
         return vh;

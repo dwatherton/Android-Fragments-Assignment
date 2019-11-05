@@ -22,6 +22,12 @@ public class DeviceDataFormatTools {
         setDeviceThumbnail(context, thumbnail, device.getDeviceType(), device.getDeviceStatus(), -1);
     }
 
+    public static void setDeviceThumbnail(
+            Context context, RelativeLayout thumbnail,
+            Device.DeviceType deviceType, Device.DeviceStatus deviceStatus) {
+        setDeviceThumbnail(context, thumbnail, deviceType, deviceStatus, -1);
+    }
+
     public static void setConnectionBtnLook(Context context, ImageButton button, Device.DeviceStatus deviceStatus) {
         switch (deviceStatus) {
             case Connected:
