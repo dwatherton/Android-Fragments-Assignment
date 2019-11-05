@@ -31,4 +31,12 @@
     <string name="recently">Recently</string>
     <string name="long_time_ago">A long time ago</string>
     <string name="never_connected">Never connected</string>
+    <!-- Device details -->
+    <string name="device_label">Device Type</string>
+    <string name="device_ip_label">IP Address</string>
+    <string name="device_last_connection_label">Last time connected</string>
+    <!-- Toolbar menu options -->
+    <string name="connect_all_label">Connect all</string>
+    <string name="disconnect_all_label">Disconnect all</string>
+    <string name="show_linked_label">Show linked</string>
 </resources>

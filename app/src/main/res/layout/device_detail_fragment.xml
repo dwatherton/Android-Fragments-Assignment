@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/margin_llmedium"
+    android:paddingTop="@dimen/margin_medium"
+    android:paddingRight="@dimen/margin_llmedium"
+    android:paddingBottom="@dimen/margin_llmedium">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/save_btn"
+        android:layout_gravity="end"
+        android:text="save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.Button.TextButton" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <RelativeLayout
+            android:layout_width="88dp"
+            android:layout_height="88dp">
+
+            <RelativeLayout
+                android:id="@+id/detail_thumbnail_image"
+                android:layout_width="88dp"
+                android:layout_height="88dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/thumbnail_background_solid">
+
+                <ImageView
+                    android:id="@+id/image_icon"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_unknown_device"
+                    android:tint="@android:color/white" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/detail_status_mark"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/status_mark_ready" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:gravity="center_horizontal">
+
+        <EditText
+            android:id="@+id/detail_device_name_edittext"
+            style="@style/DataDeviceDetailEditTextTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:inputType="textNoSuggestions"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/detail_device_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/unknown"
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/grey_40"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <View style="@style/DeviceDetailDivider" />
+
+    <TextView
+        style="@style/LabelDeviceDetailTextViewTheme"
+        android:text="@string/device_label" />
+
+    <Spinner
+        android:id="@+id/device_type_spinner"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        style="@style/LabelDeviceDetailTextViewTheme"
+        android:text="@string/device_last_connection_label" />
+
+    <TextView
+        android:id="@+id/last_time_connection_textview"
+        style="@style/DataDeviceDetailTextViewTheme"
+        android:text="@string/unknown" />
+</LinearLayout>
