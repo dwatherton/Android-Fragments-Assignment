@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <item
+        android:id="@+id/connect_all"
+        android:title="@string/connect_all_label"
+        app:showAsAction="collapseActionView"/>
+    <item
+        android:id="@+id/disconnect_all"
+        android:title="@string/disconnect_all_label"
+        app:showAsAction="collapseActionView"/>
+    <item
+        android:id="@+id/show_linked"
+        android:checkable="true"
+        android:title="@string/show_linked_label"
+        app:showAsAction="collapseActionView"/>
+</menu>
