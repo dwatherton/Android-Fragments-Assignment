@@ -78,8 +78,8 @@ public class Device extends DeviceListItem {
         Unknown,
         Desktop,
         Laptop,
-        Tablet,
         Smartphone,
+        Tablet,
         SmartTV,
         GameConsole
     }

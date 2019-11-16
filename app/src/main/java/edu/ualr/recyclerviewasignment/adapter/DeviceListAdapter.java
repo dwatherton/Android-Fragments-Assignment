@@ -8,14 +8,11 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.SortedList;
-
 import java.util.Date;
 import java.util.List;
-
 import edu.ualr.recyclerviewasignment.R;
 import edu.ualr.recyclerviewasignment.data.DeviceDataFormatTools;
 import edu.ualr.recyclerviewasignment.model.Device;
@@ -32,6 +29,7 @@ public class DeviceListAdapter extends RecyclerView.Adapter {
 
     private SortedList<DeviceListItem> mItems;
     private Context mContext;
+    private OnItemClickListener mOnItemClickListener;
 
     public DeviceListAdapter(Context context) {
         this.mContext = context;
@@ -141,6 +139,10 @@ public class DeviceListAdapter extends RecyclerView.Adapter {
         return this.mItems.get(position).isSection() ? SECTION_VIEW : DEVICE_VIEW;
     }
 
+    public SortedList<DeviceListItem> getDevices() {
+        return mItems;
+    }
+
     private class SectionViewHolder extends RecyclerView.ViewHolder {
         public TextView title_section_label;
 
@@ -156,6 +158,7 @@ public class DeviceListAdapter extends RecyclerView.Adapter {
         private TextView name;
         private TextView elapsedTimeLabel;
         private ImageButton connectBtn;
+        private RelativeLayout deviceItemContainer;
 
         public DeviceViewHolder(View v) {
             super(v);
@@ -165,12 +168,19 @@ public class DeviceListAdapter extends RecyclerView.Adapter {
             elapsedTimeLabel = v.findViewById(R.id.elapsed_time);
             connectBtn = v.findViewById(R.id.device_connect_btn);
             connectBtn.setOnClickListener(this);
+            deviceItemContainer = v.findViewById(R.id.device_item_container);
+            deviceItemContainer.setOnClickListener(this);
         }
 
 
         @Override
         public void onClick(View view) {
-            toggleConnection();
+            if (view.getId() == R.id.device_connect_btn) {
+                toggleConnection();
+            }
+            else if (view.getId() == R.id.device_item_container) {
+                mOnItemClickListener.onItemClick(getAdapterPosition());
+            }
         }
 
         private void toggleConnection() {
@@ -184,5 +194,13 @@ public class DeviceListAdapter extends RecyclerView.Adapter {
             }
             mItems.updateItemAt(getAdapterPosition(), device);
         }
+    }
+
+    public interface OnItemClickListener {
+        void onItemClick(int position);
+    }
+
+    public void setOnItemClickListener(final OnItemClickListener mItemClickListener) {
+        this.mOnItemClickListener = mItemClickListener;
     }
 }

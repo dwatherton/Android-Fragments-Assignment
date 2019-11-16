@@ -1,33 +1,50 @@
 package edu.ualr.recyclerviewasignment;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
+import androidx.appcompat.widget.Toolbar;
 import android.os.Bundle;
-
-import edu.ualr.recyclerviewasignment.adapter.DeviceListAdapter;
-import edu.ualr.recyclerviewasignment.data.DataGenerator;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
 
-    private RecyclerView mRecyclerView;
-    private DeviceListAdapter mAdapter;
+    public static final String TAG = "Homework_8";
+    private DeviceListFragment deviceListFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        initRecyclerView();
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        deviceListFragment = ((DeviceListFragment) getSupportFragmentManager().findFragmentById(R.id.device_list_fragment));
     }
 
-    private void initRecyclerView(){
-        mAdapter = new DeviceListAdapter(this);
-        mRecyclerView = findViewById(R.id.devices_recycler_view);
-        mRecyclerView.setAdapter(mAdapter);
-        mAdapter.addAll(DataGenerator.getDevicesDataset(5));
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.toolbar_menu, menu);
+        menu.findItem(R.id.show_linked).setChecked(true);
+        return true;
+    }
 
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
-        mRecyclerView.setLayoutManager(layoutManager);
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        Log.d(TAG, "Clicked on menu option: " + item.getTitle() + ".");
+        switch (item.getItemId()) {
+            case R.id.connect_all:
+                deviceListFragment.connectAll();
+                return true;
+            case R.id.disconnect_all:
+                deviceListFragment.disconnectAll();
+                return true;
+            case R.id.show_linked:
+                item.setChecked(!item.isChecked());
+                deviceListFragment.toggleLinked(item.isChecked());
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }
